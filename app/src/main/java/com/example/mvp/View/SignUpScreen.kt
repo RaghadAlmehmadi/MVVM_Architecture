@@ -1,4 +1,4 @@
-package com.example.mvp.vm
+package com.example.mvp.View
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -9,6 +9,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.example.mvp.Model.SignUpViewModel
 
 @Composable
 fun SignUpScreen(navController: NavController) {
