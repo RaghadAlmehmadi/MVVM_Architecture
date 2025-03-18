@@ -17,10 +17,10 @@ This app provides a simple authentication system using **Jetpack Compose** and *
 # Screenshots
 
 # Sign-In Screen
-<img width="1440" alt="Signin" src="https://github.com/user-attachments/assets/7f59582e-c168-4531-b732-b0b9207c193a" />
+<img width="1440" alt="Signin" src="https://github.com/user-attachments/assets/4b5c24d4-5c35-4e48-b542-79cb506df19f" />
 
 # Sign-Up Screen
-<img width="1440" alt="signup" src="https://github.com/user-attachments/assets/83195614-ae11-43b8-986b-5c8013764780" />
+<img width="1440" alt="Signup" src="https://github.com/user-attachments/assets/0e28c6e0-f686-4f74-83c3-2d518318cafc" />
 
 # Sign-In Screen With Validation
 <img width="1440" alt="Sign-In Screen_With_Validation" src="https://github.com/user-attachments/assets/3da94bf9-5b13-4f16-b4b0-bdb42ccc120c" />
