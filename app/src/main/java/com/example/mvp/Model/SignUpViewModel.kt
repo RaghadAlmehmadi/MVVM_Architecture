@@ -22,6 +22,9 @@ class SignUpViewModel : ViewModel() {
     private val _errorMessage = MutableLiveData("")
     val errorMessage: LiveData<String> = _errorMessage
 
+    private val _signUpMessage = MutableLiveData<String?>()
+    val signUpMessage: LiveData<String?> = _signUpMessage
+
     fun updateName(newName: String) {
         _name.value = newName
     }
@@ -43,7 +46,7 @@ class SignUpViewModel : ViewModel() {
             _errorMessage.value = validationError
         } else {
             _errorMessage.value = ""
-            println("Signing up with Email: ${_email.value} and Password: ${_password.value}")
+            _signUpMessage.value = "Successfully signed Up with ${email.value} \n password ${password.value}"
         }
     }
 }

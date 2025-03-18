@@ -5,8 +5,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.mvp.Model.SignUpViewModel
@@ -20,6 +22,8 @@ fun SignUpScreen(navController: NavController) {
     val password by viewModel.password.observeAsState("")
     val confirmPassword by viewModel.confirmPassword.observeAsState("")
     val errorMessage by viewModel.errorMessage.observeAsState("")
+    val signUpMessage by viewModel.signUpMessage.observeAsState()
+
     Column(
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
@@ -79,7 +83,17 @@ fun SignUpScreen(navController: NavController) {
             Text("Sign Up")
         }
         Spacer(modifier = Modifier.height(8.dp))
-
+        Spacer(modifier = Modifier.height(8.dp))
+        signUpMessage?.let {
+            Text(
+                text = it,
+                fontSize = 20.sp,
+                style = MaterialTheme.typography.bodyMedium,
+                color = Color.Black,
+                modifier = Modifier.padding(start = 16.dp)
+            )
+        }
+        Spacer(modifier = Modifier.height(8.dp))
         TextButton(
             onClick = { navController.navigate("signIn") }, // Navigate back to Sign-In
 

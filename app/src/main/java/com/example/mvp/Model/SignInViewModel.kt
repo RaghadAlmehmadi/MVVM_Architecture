@@ -16,6 +16,10 @@ class SignInViewModel : ViewModel() {
     private val _errorMessage = MutableLiveData<String?>()
     val errorMessage: LiveData<String?> = _errorMessage
 
+    private val _signInMessage = MutableLiveData<String?>()
+    val signInMessage: LiveData<String?> = _signInMessage
+
+
     fun updateEmail(newEmail: String) {
         _email.value = newEmail
     }
@@ -31,7 +35,7 @@ class SignInViewModel : ViewModel() {
             _errorMessage.value = validationError
         } else {
             _errorMessage.value = " " // No error
-            println("Signing in with Email: ${_email.value}  and Password ${_password.value}")
+            _signInMessage.value = "Successfully signed in with ${email.value} \n password ${password.value}"
         }
     }
 }
